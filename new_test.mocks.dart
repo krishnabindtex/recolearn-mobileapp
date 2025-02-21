@@ -9,14 +9,11 @@ import 'dart:ui' as _i14;
 import 'package:flutter/material.dart' as _i4;
 import 'package:get/get.dart' as _i2;
 import 'package:get/get_state_manager/src/simple/list_notifier.dart' as _i13;
-import 'package:get_storage/get_storage.dart' as _i8;
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:mockito/src/dummies.dart' as _i17;
-import 'package:recolearn_mobile/cache_manager.dart' as _i16;
 import 'package:recolearn_mobile/controllers/shops/shops_controller.dart'
     as _i9;
 import 'package:recolearn_mobile/models/auth/login_model/login_response_model.dart'
-    as _i15;
+    as _i8;
 import 'package:recolearn_mobile/models/shops/category_by_id_model.dart' as _i6;
 import 'package:recolearn_mobile/models/shops/parent_category_model.dart'
     as _i10;
@@ -98,19 +95,9 @@ class _FakeProductByIdModel_10 extends _i1.SmartFake
     : super(parent, parentInvocation);
 }
 
-class _FakeMicrotask_11 extends _i1.SmartFake implements _i8.Microtask {
-  _FakeMicrotask_11(Object parent, Invocation parentInvocation)
-    : super(parent, parentInvocation);
-}
-
-class _FakeGetQueue_12 extends _i1.SmartFake implements _i2.GetQueue {
-  _FakeGetQueue_12(Object parent, Invocation parentInvocation)
-    : super(parent, parentInvocation);
-}
-
-class _FakeValueStorage_13<T> extends _i1.SmartFake
-    implements _i8.ValueStorage<T> {
-  _FakeValueStorage_13(Object parent, Invocation parentInvocation)
+class _FakeLoginResponseModel_11 extends _i1.SmartFake
+    implements _i8.LoginResponseModel {
+  _FakeLoginResponseModel_11(Object parent, Invocation parentInvocation)
     : super(parent, parentInvocation);
 }
 
@@ -877,13 +864,28 @@ class MockShopsController extends _i1.Mock implements _i9.ShopsController {
   );
 
   @override
-  _i12.Future<bool> saveData(_i15.LoginResponseModel? loginResponseModel) =>
+  _i12.Future<bool> saveData(_i8.LoginResponseModel? loginResponseModel) =>
       (super.noSuchMethod(
             Invocation.method(#saveData, [loginResponseModel]),
             returnValue: _i12.Future<bool>.value(false),
             returnValueForMissingStub: _i12.Future<bool>.value(false),
           )
           as _i12.Future<bool>);
+
+  @override
+  _i8.LoginResponseModel getData() =>
+      (super.noSuchMethod(
+            Invocation.method(#getData, []),
+            returnValue: _FakeLoginResponseModel_11(
+              this,
+              Invocation.method(#getData, []),
+            ),
+            returnValueForMissingStub: _FakeLoginResponseModel_11(
+              this,
+              Invocation.method(#getData, []),
+            ),
+          )
+          as _i8.LoginResponseModel);
 
   @override
   _i12.Future<void> removeData() =>
@@ -898,232 +900,6 @@ class MockShopsController extends _i1.Mock implements _i9.ShopsController {
   _i12.Future<void> removeToken() =>
       (super.noSuchMethod(
             Invocation.method(#removeToken, []),
-            returnValue: _i12.Future<void>.value(),
-            returnValueForMissingStub: _i12.Future<void>.value(),
-          )
-          as _i12.Future<void>);
-}
-
-/// A class which mocks [CacheManager].
-///
-/// See the documentation for Mockito's code generation for more information.
-class MockCacheManager extends _i1.Mock implements _i16.CacheManager {
-  @override
-  _i12.Future<bool> saveData(_i15.LoginResponseModel? loginResponseModel) =>
-      (super.noSuchMethod(
-            Invocation.method(#saveData, [loginResponseModel]),
-            returnValue: _i12.Future<bool>.value(false),
-            returnValueForMissingStub: _i12.Future<bool>.value(false),
-          )
-          as _i12.Future<bool>);
-
-  @override
-  _i12.Future<void> removeData() =>
-      (super.noSuchMethod(
-            Invocation.method(#removeData, []),
-            returnValue: _i12.Future<void>.value(),
-            returnValueForMissingStub: _i12.Future<void>.value(),
-          )
-          as _i12.Future<void>);
-
-  @override
-  _i12.Future<void> removeToken() =>
-      (super.noSuchMethod(
-            Invocation.method(#removeToken, []),
-            returnValue: _i12.Future<void>.value(),
-            returnValueForMissingStub: _i12.Future<void>.value(),
-          )
-          as _i12.Future<void>);
-}
-
-/// A class which mocks [GetStorage].
-///
-/// See the documentation for Mockito's code generation for more information.
-class MockGetStorage extends _i1.Mock implements _i8.GetStorage {
-  @override
-  _i8.Microtask get microtask =>
-      (super.noSuchMethod(
-            Invocation.getter(#microtask),
-            returnValue: _FakeMicrotask_11(this, Invocation.getter(#microtask)),
-            returnValueForMissingStub: _FakeMicrotask_11(
-              this,
-              Invocation.getter(#microtask),
-            ),
-          )
-          as _i8.Microtask);
-
-  @override
-  _i2.GetQueue get queue =>
-      (super.noSuchMethod(
-            Invocation.getter(#queue),
-            returnValue: _FakeGetQueue_12(this, Invocation.getter(#queue)),
-            returnValueForMissingStub: _FakeGetQueue_12(
-              this,
-              Invocation.getter(#queue),
-            ),
-          )
-          as _i2.GetQueue);
-
-  @override
-  set queue(_i2.GetQueue? _queue) => super.noSuchMethod(
-    Invocation.setter(#queue, _queue),
-    returnValueForMissingStub: null,
-  );
-
-  @override
-  _i12.Future<bool> get initStorage =>
-      (super.noSuchMethod(
-            Invocation.getter(#initStorage),
-            returnValue: _i12.Future<bool>.value(false),
-            returnValueForMissingStub: _i12.Future<bool>.value(false),
-          )
-          as _i12.Future<bool>);
-
-  @override
-  set initStorage(_i12.Future<bool>? _initStorage) => super.noSuchMethod(
-    Invocation.setter(#initStorage, _initStorage),
-    returnValueForMissingStub: null,
-  );
-
-  @override
-  Map<String, dynamic> get changes =>
-      (super.noSuchMethod(
-            Invocation.getter(#changes),
-            returnValue: <String, dynamic>{},
-            returnValueForMissingStub: <String, dynamic>{},
-          )
-          as Map<String, dynamic>);
-
-  @override
-  _i8.ValueStorage<Map<String, dynamic>> get listenable =>
-      (super.noSuchMethod(
-            Invocation.getter(#listenable),
-            returnValue: _FakeValueStorage_13<Map<String, dynamic>>(
-              this,
-              Invocation.getter(#listenable),
-            ),
-            returnValueForMissingStub:
-                _FakeValueStorage_13<Map<String, dynamic>>(
-                  this,
-                  Invocation.getter(#listenable),
-                ),
-          )
-          as _i8.ValueStorage<Map<String, dynamic>>);
-
-  @override
-  T? read<T>(String? key) =>
-      (super.noSuchMethod(
-            Invocation.method(#read, [key]),
-            returnValueForMissingStub: null,
-          )
-          as T?);
-
-  @override
-  T getKeys<T>() =>
-      (super.noSuchMethod(
-            Invocation.method(#getKeys, []),
-            returnValue: _i17.dummyValue<T>(
-              this,
-              Invocation.method(#getKeys, []),
-            ),
-            returnValueForMissingStub: _i17.dummyValue<T>(
-              this,
-              Invocation.method(#getKeys, []),
-            ),
-          )
-          as T);
-
-  @override
-  T getValues<T>() =>
-      (super.noSuchMethod(
-            Invocation.method(#getValues, []),
-            returnValue: _i17.dummyValue<T>(
-              this,
-              Invocation.method(#getValues, []),
-            ),
-            returnValueForMissingStub: _i17.dummyValue<T>(
-              this,
-              Invocation.method(#getValues, []),
-            ),
-          )
-          as T);
-
-  @override
-  bool hasData(String? key) =>
-      (super.noSuchMethod(
-            Invocation.method(#hasData, [key]),
-            returnValue: false,
-            returnValueForMissingStub: false,
-          )
-          as bool);
-
-  @override
-  _i14.VoidCallback listen(_i14.VoidCallback? value) =>
-      (super.noSuchMethod(
-            Invocation.method(#listen, [value]),
-            returnValue: () {},
-            returnValueForMissingStub: () {},
-          )
-          as _i14.VoidCallback);
-
-  @override
-  _i14.VoidCallback listenKey(
-    String? key,
-    _i4.ValueSetter<dynamic>? callback,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#listenKey, [key, callback]),
-            returnValue: () {},
-            returnValueForMissingStub: () {},
-          )
-          as _i14.VoidCallback);
-
-  @override
-  _i12.Future<void> write(String? key, dynamic value) =>
-      (super.noSuchMethod(
-            Invocation.method(#write, [key, value]),
-            returnValue: _i12.Future<void>.value(),
-            returnValueForMissingStub: _i12.Future<void>.value(),
-          )
-          as _i12.Future<void>);
-
-  @override
-  void writeInMemory(String? key, dynamic value) => super.noSuchMethod(
-    Invocation.method(#writeInMemory, [key, value]),
-    returnValueForMissingStub: null,
-  );
-
-  @override
-  _i12.Future<void> writeIfNull(String? key, dynamic value) =>
-      (super.noSuchMethod(
-            Invocation.method(#writeIfNull, [key, value]),
-            returnValue: _i12.Future<void>.value(),
-            returnValueForMissingStub: _i12.Future<void>.value(),
-          )
-          as _i12.Future<void>);
-
-  @override
-  _i12.Future<void> remove(String? key) =>
-      (super.noSuchMethod(
-            Invocation.method(#remove, [key]),
-            returnValue: _i12.Future<void>.value(),
-            returnValueForMissingStub: _i12.Future<void>.value(),
-          )
-          as _i12.Future<void>);
-
-  @override
-  _i12.Future<void> erase() =>
-      (super.noSuchMethod(
-            Invocation.method(#erase, []),
-            returnValue: _i12.Future<void>.value(),
-            returnValueForMissingStub: _i12.Future<void>.value(),
-          )
-          as _i12.Future<void>);
-
-  @override
-  _i12.Future<void> save() =>
-      (super.noSuchMethod(
-            Invocation.method(#save, []),
             returnValue: _i12.Future<void>.value(),
             returnValueForMissingStub: _i12.Future<void>.value(),
           )

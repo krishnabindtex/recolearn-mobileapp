@@ -3,17 +3,17 @@
 // Do not manually edit this file.
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'dart:async' as _i5;
+import 'dart:async' as _i6;
 import 'dart:ui' as _i9;
 
 import 'package:get/get.dart' as _i2;
 import 'package:get/get_state_manager/src/simple/list_notifier.dart' as _i8;
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:mockito/src/dummies.dart' as _i4;
-import 'package:recolearn_mobile/controllers/auth/cache_manager.dart' as _i6;
+import 'package:mockito/src/dummies.dart' as _i5;
+import 'package:recolearn_mobile/controllers/auth/cache_manager.dart' as _i7;
 import 'package:recolearn_mobile/models/auth/login_model/login_response_model.dart'
-    as _i7;
-import 'package:recolearn_mobile/services/auth/login_service.dart' as _i3;
+    as _i3;
+import 'package:recolearn_mobile/services/auth/login_service.dart' as _i4;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
@@ -66,10 +66,16 @@ class _FakeRxBool_6 extends _i1.SmartFake implements _i2.RxBool {
     : super(parent, parentInvocation);
 }
 
+class _FakeLoginResponseModel_7 extends _i1.SmartFake
+    implements _i3.LoginResponseModel {
+  _FakeLoginResponseModel_7(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
+}
+
 /// A class which mocks [LoginService].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockLoginService extends _i1.Mock implements _i3.LoginService {
+class MockLoginService extends _i1.Mock implements _i4.LoginService {
   MockLoginService() {
     _i1.throwOnMissingStub(this);
   }
@@ -92,7 +98,7 @@ class MockLoginService extends _i1.Mock implements _i3.LoginService {
   String get userAgent =>
       (super.noSuchMethod(
             Invocation.getter(#userAgent),
-            returnValue: _i4.dummyValue<String>(
+            returnValue: _i5.dummyValue<String>(
               this,
               Invocation.getter(#userAgent),
             ),
@@ -126,7 +132,7 @@ class MockLoginService extends _i1.Mock implements _i3.LoginService {
   String get defaultContentType =>
       (super.noSuchMethod(
             Invocation.getter(#defaultContentType),
-            returnValue: _i4.dummyValue<String>(
+            returnValue: _i5.dummyValue<String>(
               this,
               Invocation.getter(#defaultContentType),
             ),
@@ -286,15 +292,15 @@ class MockLoginService extends _i1.Mock implements _i3.LoginService {
           as bool);
 
   @override
-  _i5.Future<dynamic> fetchLogin(dynamic data) =>
+  _i6.Future<dynamic> fetchLogin(dynamic data) =>
       (super.noSuchMethod(
             Invocation.method(#fetchLogin, [data]),
-            returnValue: _i5.Future<dynamic>.value(),
+            returnValue: _i6.Future<dynamic>.value(),
           )
-          as _i5.Future<dynamic>);
+          as _i6.Future<dynamic>);
 
   @override
-  _i5.Future<_i2.Response<T>> get<T>(
+  _i6.Future<_i2.Response<T>> get<T>(
     String? url, {
     Map<String, String>? headers,
     String? contentType,
@@ -312,7 +318,7 @@ class MockLoginService extends _i1.Mock implements _i3.LoginService {
                 #decoder: decoder,
               },
             ),
-            returnValue: _i5.Future<_i2.Response<T>>.value(
+            returnValue: _i6.Future<_i2.Response<T>>.value(
               _FakeResponse_3<T>(
                 this,
                 Invocation.method(
@@ -328,10 +334,10 @@ class MockLoginService extends _i1.Mock implements _i3.LoginService {
               ),
             ),
           )
-          as _i5.Future<_i2.Response<T>>);
+          as _i6.Future<_i2.Response<T>>);
 
   @override
-  _i5.Future<_i2.Response<T>> post<T>(
+  _i6.Future<_i2.Response<T>> post<T>(
     String? url,
     dynamic body, {
     String? contentType,
@@ -352,7 +358,7 @@ class MockLoginService extends _i1.Mock implements _i3.LoginService {
                 #uploadProgress: uploadProgress,
               },
             ),
-            returnValue: _i5.Future<_i2.Response<T>>.value(
+            returnValue: _i6.Future<_i2.Response<T>>.value(
               _FakeResponse_3<T>(
                 this,
                 Invocation.method(
@@ -369,10 +375,10 @@ class MockLoginService extends _i1.Mock implements _i3.LoginService {
               ),
             ),
           )
-          as _i5.Future<_i2.Response<T>>);
+          as _i6.Future<_i2.Response<T>>);
 
   @override
-  _i5.Future<_i2.Response<T>> put<T>(
+  _i6.Future<_i2.Response<T>> put<T>(
     String? url,
     dynamic body, {
     String? contentType,
@@ -393,7 +399,7 @@ class MockLoginService extends _i1.Mock implements _i3.LoginService {
                 #uploadProgress: uploadProgress,
               },
             ),
-            returnValue: _i5.Future<_i2.Response<T>>.value(
+            returnValue: _i6.Future<_i2.Response<T>>.value(
               _FakeResponse_3<T>(
                 this,
                 Invocation.method(
@@ -410,10 +416,10 @@ class MockLoginService extends _i1.Mock implements _i3.LoginService {
               ),
             ),
           )
-          as _i5.Future<_i2.Response<T>>);
+          as _i6.Future<_i2.Response<T>>);
 
   @override
-  _i5.Future<_i2.Response<T>> patch<T>(
+  _i6.Future<_i2.Response<T>> patch<T>(
     String? url,
     dynamic body, {
     String? contentType,
@@ -434,7 +440,7 @@ class MockLoginService extends _i1.Mock implements _i3.LoginService {
                 #uploadProgress: uploadProgress,
               },
             ),
-            returnValue: _i5.Future<_i2.Response<T>>.value(
+            returnValue: _i6.Future<_i2.Response<T>>.value(
               _FakeResponse_3<T>(
                 this,
                 Invocation.method(
@@ -451,10 +457,10 @@ class MockLoginService extends _i1.Mock implements _i3.LoginService {
               ),
             ),
           )
-          as _i5.Future<_i2.Response<T>>);
+          as _i6.Future<_i2.Response<T>>);
 
   @override
-  _i5.Future<_i2.Response<T>> request<T>(
+  _i6.Future<_i2.Response<T>> request<T>(
     String? url,
     String? method, {
     dynamic body,
@@ -477,7 +483,7 @@ class MockLoginService extends _i1.Mock implements _i3.LoginService {
                 #uploadProgress: uploadProgress,
               },
             ),
-            returnValue: _i5.Future<_i2.Response<T>>.value(
+            returnValue: _i6.Future<_i2.Response<T>>.value(
               _FakeResponse_3<T>(
                 this,
                 Invocation.method(
@@ -495,10 +501,10 @@ class MockLoginService extends _i1.Mock implements _i3.LoginService {
               ),
             ),
           )
-          as _i5.Future<_i2.Response<T>>);
+          as _i6.Future<_i2.Response<T>>);
 
   @override
-  _i5.Future<_i2.Response<T>> delete<T>(
+  _i6.Future<_i2.Response<T>> delete<T>(
     String? url, {
     Map<String, String>? headers,
     String? contentType,
@@ -516,7 +522,7 @@ class MockLoginService extends _i1.Mock implements _i3.LoginService {
                 #decoder: decoder,
               },
             ),
-            returnValue: _i5.Future<_i2.Response<T>>.value(
+            returnValue: _i6.Future<_i2.Response<T>>.value(
               _FakeResponse_3<T>(
                 this,
                 Invocation.method(
@@ -532,7 +538,7 @@ class MockLoginService extends _i1.Mock implements _i3.LoginService {
               ),
             ),
           )
-          as _i5.Future<_i2.Response<T>>);
+          as _i6.Future<_i2.Response<T>>);
 
   @override
   _i2.GetSocket socket(
@@ -549,7 +555,7 @@ class MockLoginService extends _i1.Mock implements _i3.LoginService {
           as _i2.GetSocket);
 
   @override
-  _i5.Future<_i2.GraphQLResponse<T>> query<T>(
+  _i6.Future<_i2.GraphQLResponse<T>> query<T>(
     String? query, {
     String? url,
     Map<String, dynamic>? variables,
@@ -561,7 +567,7 @@ class MockLoginService extends _i1.Mock implements _i3.LoginService {
               [query],
               {#url: url, #variables: variables, #headers: headers},
             ),
-            returnValue: _i5.Future<_i2.GraphQLResponse<T>>.value(
+            returnValue: _i6.Future<_i2.GraphQLResponse<T>>.value(
               _FakeGraphQLResponse_5<T>(
                 this,
                 Invocation.method(
@@ -572,10 +578,10 @@ class MockLoginService extends _i1.Mock implements _i3.LoginService {
               ),
             ),
           )
-          as _i5.Future<_i2.GraphQLResponse<T>>);
+          as _i6.Future<_i2.GraphQLResponse<T>>);
 
   @override
-  _i5.Future<_i2.GraphQLResponse<T>> mutation<T>(
+  _i6.Future<_i2.GraphQLResponse<T>> mutation<T>(
     String? mutation, {
     String? url,
     Map<String, dynamic>? variables,
@@ -587,7 +593,7 @@ class MockLoginService extends _i1.Mock implements _i3.LoginService {
               [mutation],
               {#url: url, #variables: variables, #headers: headers},
             ),
-            returnValue: _i5.Future<_i2.GraphQLResponse<T>>.value(
+            returnValue: _i6.Future<_i2.GraphQLResponse<T>>.value(
               _FakeGraphQLResponse_5<T>(
                 this,
                 Invocation.method(
@@ -598,7 +604,7 @@ class MockLoginService extends _i1.Mock implements _i3.LoginService {
               ),
             ),
           )
-          as _i5.Future<_i2.GraphQLResponse<T>>);
+          as _i6.Future<_i2.GraphQLResponse<T>>);
 
   @override
   void dispose() => super.noSuchMethod(
@@ -635,7 +641,7 @@ class MockLoginService extends _i1.Mock implements _i3.LoginService {
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockAuthenticationManager extends _i1.Mock
-    implements _i6.AuthenticationManager {
+    implements _i7.AuthenticationManager {
   MockAuthenticationManager() {
     _i1.throwOnMissingStub(this);
   }
@@ -697,7 +703,7 @@ class MockAuthenticationManager extends _i1.Mock
   );
 
   @override
-  void login(_i7.LoginResponseModel? loginResponseModel) => super.noSuchMethod(
+  void login(_i3.LoginResponseModel? loginResponseModel) => super.noSuchMethod(
     Invocation.method(#login, [loginResponseModel]),
     returnValueForMissingStub: null,
   );
@@ -799,28 +805,39 @@ class MockAuthenticationManager extends _i1.Mock
   );
 
   @override
-  _i5.Future<bool> saveData(_i7.LoginResponseModel? loginResponseModel) =>
+  _i6.Future<bool> saveData(_i3.LoginResponseModel? loginResponseModel) =>
       (super.noSuchMethod(
             Invocation.method(#saveData, [loginResponseModel]),
-            returnValue: _i5.Future<bool>.value(false),
+            returnValue: _i6.Future<bool>.value(false),
           )
-          as _i5.Future<bool>);
+          as _i6.Future<bool>);
 
   @override
-  _i5.Future<void> removeData() =>
+  _i3.LoginResponseModel getData() =>
+      (super.noSuchMethod(
+            Invocation.method(#getData, []),
+            returnValue: _FakeLoginResponseModel_7(
+              this,
+              Invocation.method(#getData, []),
+            ),
+          )
+          as _i3.LoginResponseModel);
+
+  @override
+  _i6.Future<void> removeData() =>
       (super.noSuchMethod(
             Invocation.method(#removeData, []),
-            returnValue: _i5.Future<void>.value(),
-            returnValueForMissingStub: _i5.Future<void>.value(),
+            returnValue: _i6.Future<void>.value(),
+            returnValueForMissingStub: _i6.Future<void>.value(),
           )
-          as _i5.Future<void>);
+          as _i6.Future<void>);
 
   @override
-  _i5.Future<void> removeToken() =>
+  _i6.Future<void> removeToken() =>
       (super.noSuchMethod(
             Invocation.method(#removeToken, []),
-            returnValue: _i5.Future<void>.value(),
-            returnValueForMissingStub: _i5.Future<void>.value(),
+            returnValue: _i6.Future<void>.value(),
+            returnValueForMissingStub: _i6.Future<void>.value(),
           )
-          as _i5.Future<void>);
+          as _i6.Future<void>);
 }

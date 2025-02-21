@@ -3,23 +3,23 @@
 // Do not manually edit this file.
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'dart:async' as _i11;
-import 'dart:ui' as _i13;
+import 'dart:async' as _i12;
+import 'dart:ui' as _i14;
 
 import 'package:flutter/material.dart' as _i4;
 import 'package:get/get.dart' as _i2;
-import 'package:get/get_state_manager/src/simple/list_notifier.dart' as _i12;
+import 'package:get/get_state_manager/src/simple/list_notifier.dart' as _i13;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:recolearn_mobile/controllers/shops/shops_controller.dart'
-    as _i8;
+    as _i9;
 import 'package:recolearn_mobile/models/auth/login_model/login_response_model.dart'
-    as _i14;
+    as _i8;
 import 'package:recolearn_mobile/models/shops/category_by_id_model.dart' as _i6;
 import 'package:recolearn_mobile/models/shops/parent_category_model.dart'
-    as _i9;
+    as _i10;
 import 'package:recolearn_mobile/models/shops/product_by_id_model.dart' as _i7;
 import 'package:recolearn_mobile/models/shops/shops_model.dart' as _i5;
-import 'package:recolearn_mobile/models/shops/sub_category_model.dart' as _i10;
+import 'package:recolearn_mobile/models/shops/sub_category_model.dart' as _i11;
 import 'package:recolearn_mobile/services/shops/shops_service.dart' as _i3;
 
 // ignore_for_file: type=lint
@@ -95,114 +95,120 @@ class _FakeProductByIdModel_10 extends _i1.SmartFake
     : super(parent, parentInvocation);
 }
 
+class _FakeLoginResponseModel_11 extends _i1.SmartFake
+    implements _i8.LoginResponseModel {
+  _FakeLoginResponseModel_11(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
+}
+
 /// A class which mocks [ShopsController].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockShopsController extends _i1.Mock implements _i8.ShopsController {
+class MockShopsController extends _i1.Mock implements _i9.ShopsController {
   @override
-  _i2.RxList<_i9.ParentCat> get parentCatList =>
+  _i2.RxList<_i10.ParentCat> get parentCatList =>
       (super.noSuchMethod(
             Invocation.getter(#parentCatList),
-            returnValue: _FakeRxList_0<_i9.ParentCat>(
+            returnValue: _FakeRxList_0<_i10.ParentCat>(
               this,
               Invocation.getter(#parentCatList),
             ),
-            returnValueForMissingStub: _FakeRxList_0<_i9.ParentCat>(
+            returnValueForMissingStub: _FakeRxList_0<_i10.ParentCat>(
               this,
               Invocation.getter(#parentCatList),
             ),
           )
-          as _i2.RxList<_i9.ParentCat>);
+          as _i2.RxList<_i10.ParentCat>);
 
   @override
-  set parentCatList(_i2.RxList<_i9.ParentCat>? _parentCatList) =>
+  set parentCatList(_i2.RxList<_i10.ParentCat>? _parentCatList) =>
       super.noSuchMethod(
         Invocation.setter(#parentCatList, _parentCatList),
         returnValueForMissingStub: null,
       );
 
   @override
-  _i2.RxList<_i10.SubCat> get subCatList =>
+  _i2.RxList<_i11.SubCat> get subCatList =>
       (super.noSuchMethod(
             Invocation.getter(#subCatList),
-            returnValue: _FakeRxList_0<_i10.SubCat>(
+            returnValue: _FakeRxList_0<_i11.SubCat>(
               this,
               Invocation.getter(#subCatList),
             ),
-            returnValueForMissingStub: _FakeRxList_0<_i10.SubCat>(
+            returnValueForMissingStub: _FakeRxList_0<_i11.SubCat>(
               this,
               Invocation.getter(#subCatList),
             ),
           )
-          as _i2.RxList<_i10.SubCat>);
+          as _i2.RxList<_i11.SubCat>);
 
   @override
-  set subCatList(_i2.RxList<_i10.SubCat>? _subCatList) => super.noSuchMethod(
+  set subCatList(_i2.RxList<_i11.SubCat>? _subCatList) => super.noSuchMethod(
     Invocation.setter(#subCatList, _subCatList),
     returnValueForMissingStub: null,
   );
 
   @override
-  _i2.RxList<_i10.Recommendation> get pSubCatList =>
+  _i2.RxList<_i11.Recommendation> get pSubCatList =>
       (super.noSuchMethod(
             Invocation.getter(#pSubCatList),
-            returnValue: _FakeRxList_0<_i10.Recommendation>(
+            returnValue: _FakeRxList_0<_i11.Recommendation>(
               this,
               Invocation.getter(#pSubCatList),
             ),
-            returnValueForMissingStub: _FakeRxList_0<_i10.Recommendation>(
+            returnValueForMissingStub: _FakeRxList_0<_i11.Recommendation>(
               this,
               Invocation.getter(#pSubCatList),
             ),
           )
-          as _i2.RxList<_i10.Recommendation>);
+          as _i2.RxList<_i11.Recommendation>);
 
   @override
-  set pSubCatList(_i2.RxList<_i10.Recommendation>? _pSubCatList) =>
+  set pSubCatList(_i2.RxList<_i11.Recommendation>? _pSubCatList) =>
       super.noSuchMethod(
         Invocation.setter(#pSubCatList, _pSubCatList),
         returnValueForMissingStub: null,
       );
 
   @override
-  _i2.RxList<_i10.Recommendation> get recommended =>
+  _i2.RxList<_i11.Recommendation> get recommended =>
       (super.noSuchMethod(
             Invocation.getter(#recommended),
-            returnValue: _FakeRxList_0<_i10.Recommendation>(
+            returnValue: _FakeRxList_0<_i11.Recommendation>(
               this,
               Invocation.getter(#recommended),
             ),
-            returnValueForMissingStub: _FakeRxList_0<_i10.Recommendation>(
+            returnValueForMissingStub: _FakeRxList_0<_i11.Recommendation>(
               this,
               Invocation.getter(#recommended),
             ),
           )
-          as _i2.RxList<_i10.Recommendation>);
+          as _i2.RxList<_i11.Recommendation>);
 
   @override
-  set recommended(_i2.RxList<_i10.Recommendation>? _recommended) =>
+  set recommended(_i2.RxList<_i11.Recommendation>? _recommended) =>
       super.noSuchMethod(
         Invocation.setter(#recommended, _recommended),
         returnValueForMissingStub: null,
       );
 
   @override
-  _i2.RxList<_i10.KitElement> get assetList =>
+  _i2.RxList<_i11.KitElement> get assetList =>
       (super.noSuchMethod(
             Invocation.getter(#assetList),
-            returnValue: _FakeRxList_0<_i10.KitElement>(
+            returnValue: _FakeRxList_0<_i11.KitElement>(
               this,
               Invocation.getter(#assetList),
             ),
-            returnValueForMissingStub: _FakeRxList_0<_i10.KitElement>(
+            returnValueForMissingStub: _FakeRxList_0<_i11.KitElement>(
               this,
               Invocation.getter(#assetList),
             ),
           )
-          as _i2.RxList<_i10.KitElement>);
+          as _i2.RxList<_i11.KitElement>);
 
   @override
-  set assetList(_i2.RxList<_i10.KitElement>? _assetList) => super.noSuchMethod(
+  set assetList(_i2.RxList<_i11.KitElement>? _assetList) => super.noSuchMethod(
     Invocation.setter(#assetList, _assetList),
     returnValueForMissingStub: null,
   );
@@ -229,22 +235,22 @@ class MockShopsController extends _i1.Mock implements _i8.ShopsController {
   );
 
   @override
-  _i2.Rx<_i9.ParentCat> get parentCat =>
+  _i2.Rx<_i10.ParentCat> get parentCat =>
       (super.noSuchMethod(
             Invocation.getter(#parentCat),
-            returnValue: _FakeRx_2<_i9.ParentCat>(
+            returnValue: _FakeRx_2<_i10.ParentCat>(
               this,
               Invocation.getter(#parentCat),
             ),
-            returnValueForMissingStub: _FakeRx_2<_i9.ParentCat>(
+            returnValueForMissingStub: _FakeRx_2<_i10.ParentCat>(
               this,
               Invocation.getter(#parentCat),
             ),
           )
-          as _i2.Rx<_i9.ParentCat>);
+          as _i2.Rx<_i10.ParentCat>);
 
   @override
-  set parentCat(_i2.Rx<_i9.ParentCat>? _parentCat) => super.noSuchMethod(
+  set parentCat(_i2.Rx<_i10.ParentCat>? _parentCat) => super.noSuchMethod(
     Invocation.setter(#parentCat, _parentCat),
     returnValueForMissingStub: null,
   );
@@ -623,51 +629,51 @@ class MockShopsController extends _i1.Mock implements _i8.ShopsController {
           as int);
 
   @override
-  _i11.Future<void> onInit() =>
+  _i12.Future<void> onInit() =>
       (super.noSuchMethod(
             Invocation.method(#onInit, []),
-            returnValue: _i11.Future<void>.value(),
-            returnValueForMissingStub: _i11.Future<void>.value(),
+            returnValue: _i12.Future<void>.value(),
+            returnValueForMissingStub: _i12.Future<void>.value(),
           )
-          as _i11.Future<void>);
+          as _i12.Future<void>);
 
   @override
-  _i11.Future<_i5.ShopsModel> getShopsCtrl() =>
+  _i12.Future<_i5.ShopsModel> getShopsCtrl() =>
       (super.noSuchMethod(
             Invocation.method(#getShopsCtrl, []),
-            returnValue: _i11.Future<_i5.ShopsModel>.value(
+            returnValue: _i12.Future<_i5.ShopsModel>.value(
               _FakeShopsModel_8(this, Invocation.method(#getShopsCtrl, [])),
             ),
-            returnValueForMissingStub: _i11.Future<_i5.ShopsModel>.value(
+            returnValueForMissingStub: _i12.Future<_i5.ShopsModel>.value(
               _FakeShopsModel_8(this, Invocation.method(#getShopsCtrl, [])),
             ),
           )
-          as _i11.Future<_i5.ShopsModel>);
+          as _i12.Future<_i5.ShopsModel>);
 
   @override
-  _i11.Future<_i5.ShopsModel> getShopsSearchCtrl(String? search) =>
+  _i12.Future<_i5.ShopsModel> getShopsSearchCtrl(String? search) =>
       (super.noSuchMethod(
             Invocation.method(#getShopsSearchCtrl, [search]),
-            returnValue: _i11.Future<_i5.ShopsModel>.value(
+            returnValue: _i12.Future<_i5.ShopsModel>.value(
               _FakeShopsModel_8(
                 this,
                 Invocation.method(#getShopsSearchCtrl, [search]),
               ),
             ),
-            returnValueForMissingStub: _i11.Future<_i5.ShopsModel>.value(
+            returnValueForMissingStub: _i12.Future<_i5.ShopsModel>.value(
               _FakeShopsModel_8(
                 this,
                 Invocation.method(#getShopsSearchCtrl, [search]),
               ),
             ),
           )
-          as _i11.Future<_i5.ShopsModel>);
+          as _i12.Future<_i5.ShopsModel>);
 
   @override
-  _i11.Future<_i5.ShopsModel> getShopCategoryCtrl({String? category}) =>
+  _i12.Future<_i5.ShopsModel> getShopCategoryCtrl({String? category}) =>
       (super.noSuchMethod(
             Invocation.method(#getShopCategoryCtrl, [], {#category: category}),
-            returnValue: _i11.Future<_i5.ShopsModel>.value(
+            returnValue: _i12.Future<_i5.ShopsModel>.value(
               _FakeShopsModel_8(
                 this,
                 Invocation.method(#getShopCategoryCtrl, [], {
@@ -675,7 +681,7 @@ class MockShopsController extends _i1.Mock implements _i8.ShopsController {
                 }),
               ),
             ),
-            returnValueForMissingStub: _i11.Future<_i5.ShopsModel>.value(
+            returnValueForMissingStub: _i12.Future<_i5.ShopsModel>.value(
               _FakeShopsModel_8(
                 this,
                 Invocation.method(#getShopCategoryCtrl, [], {
@@ -684,13 +690,13 @@ class MockShopsController extends _i1.Mock implements _i8.ShopsController {
               ),
             ),
           )
-          as _i11.Future<_i5.ShopsModel>);
+          as _i12.Future<_i5.ShopsModel>);
 
   @override
-  _i11.Future<_i6.CategoryByIdModel> getByIdCategoryCtrl({String? category}) =>
+  _i12.Future<_i6.CategoryByIdModel> getByIdCategoryCtrl({String? category}) =>
       (super.noSuchMethod(
             Invocation.method(#getByIdCategoryCtrl, [], {#category: category}),
-            returnValue: _i11.Future<_i6.CategoryByIdModel>.value(
+            returnValue: _i12.Future<_i6.CategoryByIdModel>.value(
               _FakeCategoryByIdModel_9(
                 this,
                 Invocation.method(#getByIdCategoryCtrl, [], {
@@ -698,7 +704,7 @@ class MockShopsController extends _i1.Mock implements _i8.ShopsController {
                 }),
               ),
             ),
-            returnValueForMissingStub: _i11.Future<_i6.CategoryByIdModel>.value(
+            returnValueForMissingStub: _i12.Future<_i6.CategoryByIdModel>.value(
               _FakeCategoryByIdModel_9(
                 this,
                 Invocation.method(#getByIdCategoryCtrl, [], {
@@ -707,10 +713,10 @@ class MockShopsController extends _i1.Mock implements _i8.ShopsController {
               ),
             ),
           )
-          as _i11.Future<_i6.CategoryByIdModel>);
+          as _i12.Future<_i6.CategoryByIdModel>);
 
   @override
-  _i11.Future<_i7.ProductByIdModel> getProductByIdCtrl({
+  _i12.Future<_i7.ProductByIdModel> getProductByIdCtrl({
     String? productId,
     bool? viewOrder,
   }) =>
@@ -719,7 +725,7 @@ class MockShopsController extends _i1.Mock implements _i8.ShopsController {
               #productId: productId,
               #viewOrder: viewOrder,
             }),
-            returnValue: _i11.Future<_i7.ProductByIdModel>.value(
+            returnValue: _i12.Future<_i7.ProductByIdModel>.value(
               _FakeProductByIdModel_10(
                 this,
                 Invocation.method(#getProductByIdCtrl, [], {
@@ -728,7 +734,7 @@ class MockShopsController extends _i1.Mock implements _i8.ShopsController {
                 }),
               ),
             ),
-            returnValueForMissingStub: _i11.Future<_i7.ProductByIdModel>.value(
+            returnValueForMissingStub: _i12.Future<_i7.ProductByIdModel>.value(
               _FakeProductByIdModel_10(
                 this,
                 Invocation.method(#getProductByIdCtrl, [], {
@@ -738,38 +744,38 @@ class MockShopsController extends _i1.Mock implements _i8.ShopsController {
               ),
             ),
           )
-          as _i11.Future<_i7.ProductByIdModel>);
+          as _i12.Future<_i7.ProductByIdModel>);
 
   @override
-  _i11.Future<_i5.ShopsModel> getParentCtrl() =>
+  _i12.Future<_i5.ShopsModel> getParentCtrl() =>
       (super.noSuchMethod(
             Invocation.method(#getParentCtrl, []),
-            returnValue: _i11.Future<_i5.ShopsModel>.value(
+            returnValue: _i12.Future<_i5.ShopsModel>.value(
               _FakeShopsModel_8(this, Invocation.method(#getParentCtrl, [])),
             ),
-            returnValueForMissingStub: _i11.Future<_i5.ShopsModel>.value(
+            returnValueForMissingStub: _i12.Future<_i5.ShopsModel>.value(
               _FakeShopsModel_8(this, Invocation.method(#getParentCtrl, [])),
             ),
           )
-          as _i11.Future<_i5.ShopsModel>);
+          as _i12.Future<_i5.ShopsModel>);
 
   @override
-  _i11.Future<void> getPSubCtrl(String? id) =>
+  _i12.Future<void> getPSubCtrl(String? id) =>
       (super.noSuchMethod(
             Invocation.method(#getPSubCtrl, [id]),
-            returnValue: _i11.Future<void>.value(),
-            returnValueForMissingStub: _i11.Future<void>.value(),
+            returnValue: _i12.Future<void>.value(),
+            returnValueForMissingStub: _i12.Future<void>.value(),
           )
-          as _i11.Future<void>);
+          as _i12.Future<void>);
 
   @override
-  _i11.Future<void> getSubCtrl(String? id) =>
+  _i12.Future<void> getSubCtrl(String? id) =>
       (super.noSuchMethod(
             Invocation.method(#getSubCtrl, [id]),
-            returnValue: _i11.Future<void>.value(),
-            returnValueForMissingStub: _i11.Future<void>.value(),
+            returnValue: _i12.Future<void>.value(),
+            returnValueForMissingStub: _i12.Future<void>.value(),
           )
-          as _i11.Future<void>);
+          as _i12.Future<void>);
 
   @override
   void update([List<Object>? ids, bool? condition = true]) =>
@@ -797,16 +803,16 @@ class MockShopsController extends _i1.Mock implements _i8.ShopsController {
   );
 
   @override
-  _i12.Disposer addListener(_i12.GetStateUpdate? listener) =>
+  _i13.Disposer addListener(_i13.GetStateUpdate? listener) =>
       (super.noSuchMethod(
             Invocation.method(#addListener, [listener]),
             returnValue: () {},
             returnValueForMissingStub: () {},
           )
-          as _i12.Disposer);
+          as _i13.Disposer);
 
   @override
-  void removeListener(_i13.VoidCallback? listener) => super.noSuchMethod(
+  void removeListener(_i14.VoidCallback? listener) => super.noSuchMethod(
     Invocation.method(#removeListener, [listener]),
     returnValueForMissingStub: null,
   );
@@ -830,7 +836,7 @@ class MockShopsController extends _i1.Mock implements _i8.ShopsController {
   );
 
   @override
-  void removeListenerId(Object? id, _i13.VoidCallback? listener) =>
+  void removeListenerId(Object? id, _i14.VoidCallback? listener) =>
       super.noSuchMethod(
         Invocation.method(#removeListenerId, [id, listener]),
         returnValueForMissingStub: null,
@@ -843,13 +849,13 @@ class MockShopsController extends _i1.Mock implements _i8.ShopsController {
   );
 
   @override
-  _i12.Disposer addListenerId(Object? key, _i12.GetStateUpdate? listener) =>
+  _i13.Disposer addListenerId(Object? key, _i13.GetStateUpdate? listener) =>
       (super.noSuchMethod(
             Invocation.method(#addListenerId, [key, listener]),
             returnValue: () {},
             returnValueForMissingStub: () {},
           )
-          as _i12.Disposer);
+          as _i13.Disposer);
 
   @override
   void disposeId(Object? id) => super.noSuchMethod(
@@ -858,29 +864,44 @@ class MockShopsController extends _i1.Mock implements _i8.ShopsController {
   );
 
   @override
-  _i11.Future<bool> saveData(_i14.LoginResponseModel? loginResponseModel) =>
+  _i12.Future<bool> saveData(_i8.LoginResponseModel? loginResponseModel) =>
       (super.noSuchMethod(
             Invocation.method(#saveData, [loginResponseModel]),
-            returnValue: _i11.Future<bool>.value(false),
-            returnValueForMissingStub: _i11.Future<bool>.value(false),
+            returnValue: _i12.Future<bool>.value(false),
+            returnValueForMissingStub: _i12.Future<bool>.value(false),
           )
-          as _i11.Future<bool>);
+          as _i12.Future<bool>);
 
   @override
-  _i11.Future<void> removeData() =>
+  _i8.LoginResponseModel getData() =>
+      (super.noSuchMethod(
+            Invocation.method(#getData, []),
+            returnValue: _FakeLoginResponseModel_11(
+              this,
+              Invocation.method(#getData, []),
+            ),
+            returnValueForMissingStub: _FakeLoginResponseModel_11(
+              this,
+              Invocation.method(#getData, []),
+            ),
+          )
+          as _i8.LoginResponseModel);
+
+  @override
+  _i12.Future<void> removeData() =>
       (super.noSuchMethod(
             Invocation.method(#removeData, []),
-            returnValue: _i11.Future<void>.value(),
-            returnValueForMissingStub: _i11.Future<void>.value(),
+            returnValue: _i12.Future<void>.value(),
+            returnValueForMissingStub: _i12.Future<void>.value(),
           )
-          as _i11.Future<void>);
+          as _i12.Future<void>);
 
   @override
-  _i11.Future<void> removeToken() =>
+  _i12.Future<void> removeToken() =>
       (super.noSuchMethod(
             Invocation.method(#removeToken, []),
-            returnValue: _i11.Future<void>.value(),
-            returnValueForMissingStub: _i11.Future<void>.value(),
+            returnValue: _i12.Future<void>.value(),
+            returnValueForMissingStub: _i12.Future<void>.value(),
           )
-          as _i11.Future<void>);
+          as _i12.Future<void>);
 }

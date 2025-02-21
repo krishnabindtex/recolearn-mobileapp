@@ -3,22 +3,22 @@
 // Do not manually edit this file.
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'dart:async' as _i11;
+import 'dart:async' as _i12;
 
 import 'package:get/get_connect/connect.dart' as _i2;
 import 'package:get/get_instance/src/lifecycle.dart' as _i3;
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:mockito/src/dummies.dart' as _i10;
-import 'package:recolearn_mobile/cache_manager.dart' as _i12;
+import 'package:mockito/src/dummies.dart' as _i11;
+import 'package:recolearn_mobile/cache_manager.dart' as _i13;
 import 'package:recolearn_mobile/models/auth/login_model/login_response_model.dart'
-    as _i13;
+    as _i9;
 import 'package:recolearn_mobile/models/shops/category_by_id_model.dart' as _i5;
 import 'package:recolearn_mobile/models/shops/parent_category_model.dart'
     as _i7;
 import 'package:recolearn_mobile/models/shops/product_by_id_model.dart' as _i6;
 import 'package:recolearn_mobile/models/shops/shops_model.dart' as _i4;
 import 'package:recolearn_mobile/models/shops/sub_category_model.dart' as _i8;
-import 'package:recolearn_mobile/services/shops/shops_service.dart' as _i9;
+import 'package:recolearn_mobile/services/shops/shops_service.dart' as _i10;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
@@ -95,10 +95,16 @@ class _FakeGraphQLResponse_10<T1> extends _i1.SmartFake
     : super(parent, parentInvocation);
 }
 
+class _FakeLoginResponseModel_11 extends _i1.SmartFake
+    implements _i9.LoginResponseModel {
+  _FakeLoginResponseModel_11(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
+}
+
 /// A class which mocks [ShopsService].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockShopsService extends _i1.Mock implements _i9.ShopsService {
+class MockShopsService extends _i1.Mock implements _i10.ShopsService {
   MockShopsService() {
     _i1.throwOnMissingStub(this);
   }
@@ -121,7 +127,7 @@ class MockShopsService extends _i1.Mock implements _i9.ShopsService {
   String get userAgent =>
       (super.noSuchMethod(
             Invocation.getter(#userAgent),
-            returnValue: _i10.dummyValue<String>(
+            returnValue: _i11.dummyValue<String>(
               this,
               Invocation.getter(#userAgent),
             ),
@@ -155,7 +161,7 @@ class MockShopsService extends _i1.Mock implements _i9.ShopsService {
   String get defaultContentType =>
       (super.noSuchMethod(
             Invocation.getter(#defaultContentType),
-            returnValue: _i10.dummyValue<String>(
+            returnValue: _i11.dummyValue<String>(
               this,
               Invocation.getter(#defaultContentType),
             ),
@@ -315,113 +321,113 @@ class MockShopsService extends _i1.Mock implements _i9.ShopsService {
           as bool);
 
   @override
-  _i11.Future<_i4.ShopsModel> getShopsService(String? token) =>
+  _i12.Future<_i4.ShopsModel> getShopsService(String? token) =>
       (super.noSuchMethod(
             Invocation.method(#getShopsService, [token]),
-            returnValue: _i11.Future<_i4.ShopsModel>.value(
+            returnValue: _i12.Future<_i4.ShopsModel>.value(
               _FakeShopsModel_3(
                 this,
                 Invocation.method(#getShopsService, [token]),
               ),
             ),
           )
-          as _i11.Future<_i4.ShopsModel>);
+          as _i12.Future<_i4.ShopsModel>);
 
   @override
-  _i11.Future<_i4.ShopsModel> getShopsServiceSearch(
+  _i12.Future<_i4.ShopsModel> getShopsServiceSearch(
     String? token,
     String? search,
   ) =>
       (super.noSuchMethod(
             Invocation.method(#getShopsServiceSearch, [token, search]),
-            returnValue: _i11.Future<_i4.ShopsModel>.value(
+            returnValue: _i12.Future<_i4.ShopsModel>.value(
               _FakeShopsModel_3(
                 this,
                 Invocation.method(#getShopsServiceSearch, [token, search]),
               ),
             ),
           )
-          as _i11.Future<_i4.ShopsModel>);
+          as _i12.Future<_i4.ShopsModel>);
 
   @override
-  _i11.Future<_i4.ShopsModel> getShopsCategory(
+  _i12.Future<_i4.ShopsModel> getShopsCategory(
     String? token,
     String? category,
   ) =>
       (super.noSuchMethod(
             Invocation.method(#getShopsCategory, [token, category]),
-            returnValue: _i11.Future<_i4.ShopsModel>.value(
+            returnValue: _i12.Future<_i4.ShopsModel>.value(
               _FakeShopsModel_3(
                 this,
                 Invocation.method(#getShopsCategory, [token, category]),
               ),
             ),
           )
-          as _i11.Future<_i4.ShopsModel>);
+          as _i12.Future<_i4.ShopsModel>);
 
   @override
-  _i11.Future<_i5.CategoryByIdModel> getCategoryByIdService(
+  _i12.Future<_i5.CategoryByIdModel> getCategoryByIdService(
     String? token,
     String? category,
   ) =>
       (super.noSuchMethod(
             Invocation.method(#getCategoryByIdService, [token, category]),
-            returnValue: _i11.Future<_i5.CategoryByIdModel>.value(
+            returnValue: _i12.Future<_i5.CategoryByIdModel>.value(
               _FakeCategoryByIdModel_4(
                 this,
                 Invocation.method(#getCategoryByIdService, [token, category]),
               ),
             ),
           )
-          as _i11.Future<_i5.CategoryByIdModel>);
+          as _i12.Future<_i5.CategoryByIdModel>);
 
   @override
-  _i11.Future<_i6.ProductByIdModel> getProductByIdService(
+  _i12.Future<_i6.ProductByIdModel> getProductByIdService(
     String? token,
     String? productId,
   ) =>
       (super.noSuchMethod(
             Invocation.method(#getProductByIdService, [token, productId]),
-            returnValue: _i11.Future<_i6.ProductByIdModel>.value(
+            returnValue: _i12.Future<_i6.ProductByIdModel>.value(
               _FakeProductByIdModel_5(
                 this,
                 Invocation.method(#getProductByIdService, [token, productId]),
               ),
             ),
           )
-          as _i11.Future<_i6.ProductByIdModel>);
+          as _i12.Future<_i6.ProductByIdModel>);
 
   @override
-  _i11.Future<_i7.ParentCategoryModel> getParentCategory(String? token) =>
+  _i12.Future<_i7.ParentCategoryModel> getParentCategory(String? token) =>
       (super.noSuchMethod(
             Invocation.method(#getParentCategory, [token]),
-            returnValue: _i11.Future<_i7.ParentCategoryModel>.value(
+            returnValue: _i12.Future<_i7.ParentCategoryModel>.value(
               _FakeParentCategoryModel_6(
                 this,
                 Invocation.method(#getParentCategory, [token]),
               ),
             ),
           )
-          as _i11.Future<_i7.ParentCategoryModel>);
+          as _i12.Future<_i7.ParentCategoryModel>);
 
   @override
-  _i11.Future<_i8.SubCategoryModel> getSubCategoryFromId(
+  _i12.Future<_i8.SubCategoryModel> getSubCategoryFromId(
     String? token,
     String? id,
   ) =>
       (super.noSuchMethod(
             Invocation.method(#getSubCategoryFromId, [token, id]),
-            returnValue: _i11.Future<_i8.SubCategoryModel>.value(
+            returnValue: _i12.Future<_i8.SubCategoryModel>.value(
               _FakeSubCategoryModel_7(
                 this,
                 Invocation.method(#getSubCategoryFromId, [token, id]),
               ),
             ),
           )
-          as _i11.Future<_i8.SubCategoryModel>);
+          as _i12.Future<_i8.SubCategoryModel>);
 
   @override
-  _i11.Future<_i2.Response<T>> get<T>(
+  _i12.Future<_i2.Response<T>> get<T>(
     String? url, {
     Map<String, String>? headers,
     String? contentType,
@@ -439,7 +445,7 @@ class MockShopsService extends _i1.Mock implements _i9.ShopsService {
                 #decoder: decoder,
               },
             ),
-            returnValue: _i11.Future<_i2.Response<T>>.value(
+            returnValue: _i12.Future<_i2.Response<T>>.value(
               _FakeResponse_8<T>(
                 this,
                 Invocation.method(
@@ -455,10 +461,10 @@ class MockShopsService extends _i1.Mock implements _i9.ShopsService {
               ),
             ),
           )
-          as _i11.Future<_i2.Response<T>>);
+          as _i12.Future<_i2.Response<T>>);
 
   @override
-  _i11.Future<_i2.Response<T>> post<T>(
+  _i12.Future<_i2.Response<T>> post<T>(
     String? url,
     dynamic body, {
     String? contentType,
@@ -479,7 +485,7 @@ class MockShopsService extends _i1.Mock implements _i9.ShopsService {
                 #uploadProgress: uploadProgress,
               },
             ),
-            returnValue: _i11.Future<_i2.Response<T>>.value(
+            returnValue: _i12.Future<_i2.Response<T>>.value(
               _FakeResponse_8<T>(
                 this,
                 Invocation.method(
@@ -496,10 +502,10 @@ class MockShopsService extends _i1.Mock implements _i9.ShopsService {
               ),
             ),
           )
-          as _i11.Future<_i2.Response<T>>);
+          as _i12.Future<_i2.Response<T>>);
 
   @override
-  _i11.Future<_i2.Response<T>> put<T>(
+  _i12.Future<_i2.Response<T>> put<T>(
     String? url,
     dynamic body, {
     String? contentType,
@@ -520,7 +526,7 @@ class MockShopsService extends _i1.Mock implements _i9.ShopsService {
                 #uploadProgress: uploadProgress,
               },
             ),
-            returnValue: _i11.Future<_i2.Response<T>>.value(
+            returnValue: _i12.Future<_i2.Response<T>>.value(
               _FakeResponse_8<T>(
                 this,
                 Invocation.method(
@@ -537,10 +543,10 @@ class MockShopsService extends _i1.Mock implements _i9.ShopsService {
               ),
             ),
           )
-          as _i11.Future<_i2.Response<T>>);
+          as _i12.Future<_i2.Response<T>>);
 
   @override
-  _i11.Future<_i2.Response<T>> patch<T>(
+  _i12.Future<_i2.Response<T>> patch<T>(
     String? url,
     dynamic body, {
     String? contentType,
@@ -561,7 +567,7 @@ class MockShopsService extends _i1.Mock implements _i9.ShopsService {
                 #uploadProgress: uploadProgress,
               },
             ),
-            returnValue: _i11.Future<_i2.Response<T>>.value(
+            returnValue: _i12.Future<_i2.Response<T>>.value(
               _FakeResponse_8<T>(
                 this,
                 Invocation.method(
@@ -578,10 +584,10 @@ class MockShopsService extends _i1.Mock implements _i9.ShopsService {
               ),
             ),
           )
-          as _i11.Future<_i2.Response<T>>);
+          as _i12.Future<_i2.Response<T>>);
 
   @override
-  _i11.Future<_i2.Response<T>> request<T>(
+  _i12.Future<_i2.Response<T>> request<T>(
     String? url,
     String? method, {
     dynamic body,
@@ -604,7 +610,7 @@ class MockShopsService extends _i1.Mock implements _i9.ShopsService {
                 #uploadProgress: uploadProgress,
               },
             ),
-            returnValue: _i11.Future<_i2.Response<T>>.value(
+            returnValue: _i12.Future<_i2.Response<T>>.value(
               _FakeResponse_8<T>(
                 this,
                 Invocation.method(
@@ -622,10 +628,10 @@ class MockShopsService extends _i1.Mock implements _i9.ShopsService {
               ),
             ),
           )
-          as _i11.Future<_i2.Response<T>>);
+          as _i12.Future<_i2.Response<T>>);
 
   @override
-  _i11.Future<_i2.Response<T>> delete<T>(
+  _i12.Future<_i2.Response<T>> delete<T>(
     String? url, {
     Map<String, String>? headers,
     String? contentType,
@@ -643,7 +649,7 @@ class MockShopsService extends _i1.Mock implements _i9.ShopsService {
                 #decoder: decoder,
               },
             ),
-            returnValue: _i11.Future<_i2.Response<T>>.value(
+            returnValue: _i12.Future<_i2.Response<T>>.value(
               _FakeResponse_8<T>(
                 this,
                 Invocation.method(
@@ -659,7 +665,7 @@ class MockShopsService extends _i1.Mock implements _i9.ShopsService {
               ),
             ),
           )
-          as _i11.Future<_i2.Response<T>>);
+          as _i12.Future<_i2.Response<T>>);
 
   @override
   _i2.GetSocket socket(
@@ -676,7 +682,7 @@ class MockShopsService extends _i1.Mock implements _i9.ShopsService {
           as _i2.GetSocket);
 
   @override
-  _i11.Future<_i2.GraphQLResponse<T>> query<T>(
+  _i12.Future<_i2.GraphQLResponse<T>> query<T>(
     String? query, {
     String? url,
     Map<String, dynamic>? variables,
@@ -688,7 +694,7 @@ class MockShopsService extends _i1.Mock implements _i9.ShopsService {
               [query],
               {#url: url, #variables: variables, #headers: headers},
             ),
-            returnValue: _i11.Future<_i2.GraphQLResponse<T>>.value(
+            returnValue: _i12.Future<_i2.GraphQLResponse<T>>.value(
               _FakeGraphQLResponse_10<T>(
                 this,
                 Invocation.method(
@@ -699,10 +705,10 @@ class MockShopsService extends _i1.Mock implements _i9.ShopsService {
               ),
             ),
           )
-          as _i11.Future<_i2.GraphQLResponse<T>>);
+          as _i12.Future<_i2.GraphQLResponse<T>>);
 
   @override
-  _i11.Future<_i2.GraphQLResponse<T>> mutation<T>(
+  _i12.Future<_i2.GraphQLResponse<T>> mutation<T>(
     String? mutation, {
     String? url,
     Map<String, dynamic>? variables,
@@ -714,7 +720,7 @@ class MockShopsService extends _i1.Mock implements _i9.ShopsService {
               [mutation],
               {#url: url, #variables: variables, #headers: headers},
             ),
-            returnValue: _i11.Future<_i2.GraphQLResponse<T>>.value(
+            returnValue: _i12.Future<_i2.GraphQLResponse<T>>.value(
               _FakeGraphQLResponse_10<T>(
                 this,
                 Invocation.method(
@@ -725,7 +731,7 @@ class MockShopsService extends _i1.Mock implements _i9.ShopsService {
               ),
             ),
           )
-          as _i11.Future<_i2.GraphQLResponse<T>>);
+          as _i12.Future<_i2.GraphQLResponse<T>>);
 
   @override
   void dispose() => super.noSuchMethod(
@@ -761,34 +767,45 @@ class MockShopsService extends _i1.Mock implements _i9.ShopsService {
 /// A class which mocks [CacheManager].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockCacheManager extends _i1.Mock implements _i12.CacheManager {
+class MockCacheManager extends _i1.Mock implements _i13.CacheManager {
   MockCacheManager() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i11.Future<bool> saveData(_i13.LoginResponseModel? loginResponseModel) =>
+  _i12.Future<bool> saveData(_i9.LoginResponseModel? loginResponseModel) =>
       (super.noSuchMethod(
             Invocation.method(#saveData, [loginResponseModel]),
-            returnValue: _i11.Future<bool>.value(false),
+            returnValue: _i12.Future<bool>.value(false),
           )
-          as _i11.Future<bool>);
+          as _i12.Future<bool>);
 
   @override
-  _i11.Future<void> removeData() =>
+  _i9.LoginResponseModel getData() =>
+      (super.noSuchMethod(
+            Invocation.method(#getData, []),
+            returnValue: _FakeLoginResponseModel_11(
+              this,
+              Invocation.method(#getData, []),
+            ),
+          )
+          as _i9.LoginResponseModel);
+
+  @override
+  _i12.Future<void> removeData() =>
       (super.noSuchMethod(
             Invocation.method(#removeData, []),
-            returnValue: _i11.Future<void>.value(),
-            returnValueForMissingStub: _i11.Future<void>.value(),
+            returnValue: _i12.Future<void>.value(),
+            returnValueForMissingStub: _i12.Future<void>.value(),
           )
-          as _i11.Future<void>);
+          as _i12.Future<void>);
 
   @override
-  _i11.Future<void> removeToken() =>
+  _i12.Future<void> removeToken() =>
       (super.noSuchMethod(
             Invocation.method(#removeToken, []),
-            returnValue: _i11.Future<void>.value(),
-            returnValueForMissingStub: _i11.Future<void>.value(),
+            returnValue: _i12.Future<void>.value(),
+            returnValueForMissingStub: _i12.Future<void>.value(),
           )
-          as _i11.Future<void>);
+          as _i12.Future<void>);
 }

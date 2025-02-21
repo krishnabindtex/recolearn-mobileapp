@@ -183,9 +183,10 @@ void main() {
     // Act: Call the getSubCtrl method with a test ID
     await shopsController.getSubCtrl("659cd151fecbc99d36fd9488");
 
+    // Assert: Verify that the subCatList and other properties are populated correctly
     expect(shopsController.subCatList, isNotEmpty);
     expect(shopsController.subCatList.length, 1);
-    expect(shopsController.subCatList.first.name, " 1");
+    expect(shopsController.subCatList.first.name, "Subcategory 1");
 
     expect(shopsController.recommended, isNotEmpty);
     expect(shopsController.recommended.first.title, "Recommendation 1");

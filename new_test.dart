@@ -52,7 +52,7 @@ void main() {
 
     final searchField = find.byType(TextField);
     await tester.enterText(searchField, 'Yoga');
-    await tester.pump(); // Allow UI to rebuild
+    await tester.pump();
 
     verify(mockShopsController.getShopsSearchCtrl('Yoga')).called(1);
   });
